@@ -3,10 +3,12 @@ ul {
   margin: 0;
   padding: 0px;
 }
-li, .program__title {
+li,
+.program__title {
   list-style: none;
 }
-input,button {
+input,
+button {
   outline: none;
 }
 
