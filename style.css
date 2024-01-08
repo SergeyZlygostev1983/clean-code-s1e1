@@ -30,9 +30,9 @@ input,button{
 }
 
 @media (max-width:768px) {
-.image {
-  text-align: center;
-}
+  .image {
+    text-align: center;
+  }
 }
 .program {
   display: block;
