@@ -1,5 +1,17 @@
+/* intentionally resetting the default styles */
+ul {
+  margin:0;
+  padding: 0px;
+}
+li, .program__title {
+  list-style:none;
+}
+input,button{
+  outline:none;
+}
+
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: "Lato", sans-serif;
@@ -10,10 +22,10 @@ body {
   display: block;
   text-align: right;
 }
-.image img {
+.image__img {
   width: 100%;
 }
-.image .image__more {
+.image__more {
   font-family: fantasy, cursive;
 }
 
@@ -35,17 +47,9 @@ body {
 .program__task-wrapper {
   display: flex;
 }
-ul {
-  margin:0;
-  padding: 0px;
-}
-li, h3 {
-  list-style:none;
-}
-input,button{
-  outline:none;
-}
-button {
+.program__btn,
+.program__task-delete,
+.program__task-edit {
   background: none;
   border: 0px;
   color: #888;
@@ -54,12 +58,12 @@ button {
   font-family: "Lato", sans-serif;
   cursor: pointer;
 }
-button:hover {
+.program__btn:hover,
+.program__task-edit:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="newTask"] {
+.program__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -68,7 +72,7 @@ label[for="newTask"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.program__task-text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -80,70 +84,69 @@ input[type="text"] {
   font-family: "Lato", sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.program__task-text:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="newTask"] {
+.program__title-adding {
   display: block;
   margin: 0 0 20px;
 }
-input#newTask {
+.program__task-wrapper .program__task-text {
   width: 318px;
 }
 
 /* Task list */
-li {
-  overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-
+.program__list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
 }
-li > * {
+.program__list-item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.program__list-item > .program__task-checkbox {
   margin: 0 10px;
 }
-li > label {
+.program__list-item > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li > input[type="text"] {
+.program__list-item > .program__task-text {
   width: 226px
 }
-button.program__task-delete img {
+.program__btn-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.program__task-delete img:hover {
+.program__btn-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completedTasks label {
+.program__completed-tasks .program__task-label {
   text-decoration: line-through
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.program__list-item .program__task-text {
   display:none
 }
 
-ul li.program__edit-mode input[type="text"] {
+.program__edit-mode .program__task-text {
   display:inline-block;
   width:224px
 }
 
-ul li.program__edit-mode label {
+.program__edit-mode label {
   display:none;
 }

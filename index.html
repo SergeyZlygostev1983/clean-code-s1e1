@@ -5,49 +5,49 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="page">
     <div class="image">
-      <img src="./eisenhower-matrix.jpg">
+      <img class="image__img" src="./eisenhower-matrix.jpg">
       <a class="image__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </div>
     <div class="program">
       <p id="addingElement">
-        <label for="newTask">Add Item</label>
+        <label class="program__title program__title-adding" for="newTask">Add Item</label>
         <div class="program__task-wrapper">
-          <input class="program__task" id="newTask" type="text">
-          <button>Add</button>
+          <input class="program__task program__task-text" id="newTask" type="text">
+          <button class="program__btn">Add</button>
         </div>
       </p>
-      <h3>Todo</h3>
-      <ul id="incompletedTasks">
-        <li>
-          <input type="checkbox">
+      <h3 class="program__title">Todo</h3>
+      <ul class="program__incompleted-tasks" id="incompletedTasks">
+        <li class="program__list-item">
+          <input class="program__task-checkbox" type="checkbox">
           <label class="program__task">Pay Bills</label>
-          <input class="program__task" type="text">
-          <button class="program__task-edit">Edit</button>
-          <button class="program__task-delete">
-            <img src="./remove.svg">
+          <input class="program__task program__task-text" type="text">
+          <button class="program__btn program__task-edit">Edit</button>
+          <button class="program__btn program__task-delete">
+            <img class="program__btn-img" src="./remove.svg">
           </button>
         </li>
-        <li class="program__edit-mode">
-          <input type="checkbox">
+        <li class="program__list-item program__edit-mode">
+          <input class="program__task-checkbox" type="checkbox">
           <label class="program__task">Go Shopping</label>
-          <input class="program__task" type="text" value="Go Shopping">
-          <button class="program__task-edit">Save</button>
-          <button class="program__task-delete">
-            <img src="./remove.svg">
+          <input class="program__task program__task-text" type="text" value="Go Shopping">
+          <button class="program__btn program__task-edit">Save</button>
+          <button class="program__btn program__task-delete">
+            <img class="program__btn-img" src="./remove.svg">
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul id="completedTasks">
-        <li>
-          <input type="checkbox" checked>
-          <label class="program__task">See the Doctor</label>
-          <input class="program__task" type="text">
-          <button class="program__task-edit">Edit</button>
-          <button class="program__task-delete">
-            <img src="./remove.svg">
+      <h3 class="program__title">Completed</h3>
+      <ul class="program__completed-tasks" id="completedTasks">
+        <li class="program__list-item">
+          <input class="program__task-checkbox" type="checkbox" checked>
+          <label class="program__task program__task-label">See the Doctor</label>
+          <input class="program__task program__task-text" type="text">
+          <button class="program__btn program__task-edit">Edit</button>
+          <button class="program__btn program__task-delete">
+            <img class="program__btn-img" src="./remove.svg">
           </button>
         </li>
       </ul>
